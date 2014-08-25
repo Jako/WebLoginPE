@@ -1,0 +1,19 @@
+<form class="UserManageUsersForm" action="[~[*id*]~]" method="post" role="form">
+    <div class="UserPagePhoto">
+        <img src="[+view.photo+]" alt="[+view.photo+]" title="[+view.username+]" height="100" width="100"/>
+
+        <p class="UserPageUsername">[+view.username+]</p>
+        <!-- These hidden fields are IMPORTANT! -->
+        <input type="hidden" name="internalKey" value="[+view.internalKey+]"/>
+        <input type="hidden" name="username" value="[+view.username+]"/>
+    </div>
+    <div class="UserPageUserContent">
+        <p><span class="label">[+lang.label_username+]:</span> [+view.username+]</p>
+
+        <p><span class="label">[+lang.label_age+]:</span> [+view.age+]</p>
+
+        <p><span class="label">[+lang.label_current_status+]:</span> [+view.status+]</p>
+    </div>
+    <button class="btn btn-default" name="service" value="editprofile">[+lang.button_edit_user+]</button>
+    <button class="btn btn-default" name="service" value="deleteuser">[+lang.button_delete_user+]</button>
+</form>

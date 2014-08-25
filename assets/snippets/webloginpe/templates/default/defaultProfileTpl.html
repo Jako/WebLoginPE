@@ -1,0 +1,82 @@
+[+wlpe.message+]
+<div id="wlpeUser">
+	<form enctype="multipart/form-data" id="wlpeUserProfileForm" action="[~[*id*]~]" method="POST">
+		<fieldset id="wlpeUserProfileInput">
+			<div id="wlpeUserInfo">
+				<h3 id="wlpeProfileWelcome">[+lang.message_edit_profilem+]</h3>
+				<p id="wlpeProfileInfo" class="info">[+lang.message_edit_profile+]</p>
+			</div>
+		
+			<legend>[+lang.title_profile+]</legend>
+
+			<label for="wlpeUserProfileFullName">[+lang.full_name+]
+			<input id="wlpeUserProfileFullName" type="text" name="fullname" value="[+user.fullname+]" />
+			</label>
+
+			<label for="wlpeUserProfileEmail">[+lang.label_email+]
+			<input id="wlpeUserProfileEmail" type="text" name="email" value="[+user.email+]" />
+			</label>
+
+			<label for="wlpeUserProfilePhone">[+lang.label_phone_no+]
+			<input id="wlpeUserProfilePhone" type="text" name="phone" value="[+user.phone+]" />
+			</label>
+
+			<label for="wlpeUserProfileMobile">[+lang.label_mobile_no+]
+			<input id="wlpeUserProfileMobile" type="text" name="mobilephone" value="[+user.mobilephone+]" />
+			</label>
+
+			<label for="wlpeUserProfileFax">[+lang.label_fax_no+]
+			<input id="wlpeUserProfileFax" type="text" name="fax" value="[+user.fax+]" />
+			</label>
+
+			<label for="wlpeUserProfileState">[+lang.label_state+]
+			<input id="wlpeUserProfileState" type="text" name="state" value="[+user.state+]" />
+			</label>
+
+			<label for="wlpeUserProfileZip">[+lang.label_zip+]
+			<input id="wlpeUserProfileZip" type="text" name="zip" value="[+user.zip+]" />
+			</label>
+
+			[+form.country+]
+
+			<label for="wlpeUserProfileDob">[+lang.label_date_birth+] <span class="info">(DD-MM-YYYY)</span>
+			<input id="wlpeUserProfileDob" type="text" name="dob" value="[+user.dob+]" />
+			</label>
+
+			[+form.gender+]
+			
+			<label for="wlpeUserProfileComment">[+lang.label_comment_signature+]
+			<textarea id="wlpeUserProfileComment" name="comment">[+user.comment+]</textarea>
+			</label>
+
+			<img id="wlpeUserProfilePhotoImg" src="[+user.photo+]" alt="[+user.username+]" title="[+user.fullname+]" height="100" width="100" />
+
+			<label for="wlpeUserProfilePhoto" id="wlpeUserPhotoLabel">[+lang.label_user_photo+]
+			<input type="hidden" id="wlpeUserHiddenPhoto" name="userphoto" value="[+user.photo+]" />
+			<input id="wlpeUserProfilePhoto" type="file" name="photo" value="" />
+			</label>
+
+			<p id="wlpeUserProfilePhotoInfo" class="info">[+lang.message_user_photo+]</p>
+							
+			<fieldset id="wlpeNewPasswordArea">
+				<legend id="wlpeNewPasswordAreaLegend">[+lang.title_change_password+]</legend>
+				<p id="wlpeNewPasswordInfo">[+lang.message_change_password+]</span></p>
+
+				<label for="wlpeUserProfilePassword">[+lang.label_new_password+]
+				<input id="wlpeUserProfilePassword" type="password" name="password" value="" />
+				</label>
+
+				<label for="wlpeUserProfilePasswordConfirm">[+lang.label_new_password_confirm+]
+				<input id="wlpeUserProfilePasswordConfirm" type="password" name="password.confirm" value="" />
+				</label>
+			</fieldset>
+			
+		</fieldset>
+		<fieldset id="wlpeUserProfileButtons">
+			<button type="submit" id="wlpeSaveProfileButton" name="service" value="saveprofile">[+lang.button_save+]</button>
+			<button type="submit" id="wlpeProfileDoneButton" name="service" value="cancel">[+lang.button_cancel+]</button>
+			<button type="submit" id="wlpeProfileLogoutButton" name="service" value="logout">[+lang.button_logout+]</button>
+			<button type="submit" id="wlpeProfileDeleteButton" name="service" value="deleteprofile">[+lang.button_delete_profile+]</button>
+		</fieldset>
+	</form>
+</div>

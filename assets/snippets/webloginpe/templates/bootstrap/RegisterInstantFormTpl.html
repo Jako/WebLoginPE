@@ -1,0 +1,104 @@
+[+wlpe.message+]
+<form enctype="multipart/form-data" id="UserRegisterForm" action="[~[*id*]~]" method="post" role="form">
+    <fieldset>
+        <legend>[+lang.title_new_account+]</legend>
+        <div id="UserNewUserInfo">
+            <p>[+lang.message_new_account+]</p>
+        </div>
+        <div class="form-group required">
+            <label for="UserRegisterEmail">[+lang.label_email+]</label>
+            <input type="email" class="form-control" id="UserRegisterEmail" name="email" value="[+post.email+]" required="required"/>
+        </div>
+        <div class="form-group required">
+            <label for="UserRegisterUserName">[+lang.label_desired_username+]</label>
+            <input type="text" class="form-control" id="UserRegisterUserName" name="username" value="[+post.username+]" required="required"/>
+        </div>
+        <div class="form-group required">
+            <label for="UserRegisterFullName">[+lang.label_full_name+]</label>
+            <input type="text" class="form-control" id="UserRegisterFullName" name="fullname" value="[+post.fullname+]" required="required"/>
+        </div>
+        <div class="form-group required">
+            <label for="UserRegisterPassword">[+lang.label_password+]</label>
+            <input type="password" class="form-control" id="UserRegisterPassword" name="password" value="[+post.password+]" required="required"/>
+        </div>
+        <div class="form-group required">
+            <label for="UserRegisterPasswordConfirm">[+lang.label_password_confirm+]</label>
+            <input type="password" class="form-control" id="UserRegisterPasswordConfirm" name="passwordconfirm" value="[+post.passwordconfirm+]" required="required"/>
+        </div>
+        <div class="form-group">
+            <label for="UserRegisterPhone">[+lang.label_phone_no+]</label>
+            <input type="text" class="form-control" id="UserRegisterPhone" name="phone" value="[+post.phone+]"/>
+        </div>
+        <div class="form-group">
+            <label for="UserRegisterMobile">[+lang.label_mobile_no+]</label>
+            <input type="text" class="form-control" id="UserRegisterMobile" name="mobilephone" value="[+post.mobilephone+]"/>
+        </div>
+        <div class="form-group">
+            <label for="UserRegisterFax">[+lang.label_fax_no+]</label>
+            <input type="text" class="form-control" id="UserRegisterFax" name="fax" value="[+post.fax+]"/>
+        </div>
+        <div class="form-group">
+            <label for="UserRegisterState">[+lang.label_state+]</label>
+            <input type="text" class="form-control" id="UserRegisterState" name="state" value="[+post.state+]"/>
+        </div>
+        <div class="form-group">
+            <label for="UserRegisterZip">[+lang.label_zip+]</label>
+            <input type="text" class="form-control" id="UserRegisterZip" name="zip" value="[+post.zip+]"/>
+        </div>
+        [+form.country+]
+        <div class="form-group">
+            <label for="UserRegisterDob">[+lang.label_date_birth+]</label>
+            <input type="date" class="form-control" id="UserRegisterDob" name="dob" value="[+post.dob+]"/>
+        </div>
+        [+form.gender+]
+        <div class="form-group row">
+            <div class="col-sm-2">
+                <img id="UserDefaultImage" src="[+user.defaultphoto+]" alt="Default User Image" title="Default User Image" height="100" width="100"/>
+            </div>
+            <div class="col-sm-10">
+                <label for="UserProfilePhoto">[+lang.label_user_photo+]</label>
+                <input type="file" id="UserProfilePhoto" name="photo"/>
+                <span class="help-block">[+lang.message_user_photo+]</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="UserRegisterComment">[+lang.label_comment_signature+]</label>
+            <textarea class="form-control" id="UserRegisterComment" rows="3" name="comment">[+post.comment+]</textarea>
+        </div>
+        <div class="form-group row required">
+            <div class="col-sm-3">
+                <img id="UserCaptchaImage" src="[+form.captcha+]" width="148" height="60" alt="[+lang.message_captcha+]"/>
+            </div>
+            <div class="col-sm-9">
+                <label for="UserRegisterCaptcha">[+lang.label_captcha+]</label>
+                <input type="text" class="form-control" id="UserRegisterCaptcha" name="formcode">
+            </div>
+        </div>
+        <div class="checkbox required">
+            <div class="modal fade" id="tosModal" tabindex="-1" role="dialog" aria-labelledby="tosModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span aria-hidden="true">&times;</span><span class="sr-only">[+lang.button_close+]</span></button>
+                            <h4 class="modal-title" id="tosModalLabel">[+lang.label_tos+]</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div id="UserTermsOfService">[+tos+]</div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span aria-hidden="true">&times;</span><span class="sr-only">[+lang.button_close+]</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <label for="UserTosCheckbox">
+                <input type="checkbox" id="UserTosCheckbox" name="tos" required="required"/>
+                [+lang.label_tos_accept_modal+]
+            </label>
+        </div>
+    </fieldset>
+    <button type="submit" class="btn btn-default" name="service" value="register">[+lang.register+]</button>
+    <a href="[~[*id*]~]?service=cancel" class="btn btn-default" role="button">[+lang.cancel+]Cancel</a>
+</form>

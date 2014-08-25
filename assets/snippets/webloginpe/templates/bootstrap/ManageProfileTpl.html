@@ -1,0 +1,78 @@
+[+wlpe.message+]
+<form enctype="multipart/form-data" id="UserProfileForm" action="[~[*id*]~]" method="post" role="form">
+    <fieldset>
+        <legend>[+lang.title_user_profile+]</legend>
+        <div id="UserInfo">
+            <h3>[+lang.title_edit_user_profile+]</h3>
+            <p class="info">[+lang.message_edit_user_profile+]</p>
+        </div>
+        <!-- These hidden fields are IMPORTANT! -->
+        <input type="hidden" name="internalKey" value="[+view.internalKey+]"/>
+        <input type="hidden" name="username" value="[+view.username+]"/>
+
+        <div class="form-group required">
+            <label for="UserProfileFullName">[+lang.label_full_name+]</label>
+            <input type="text" class="form-control" id="UserProfileFullName" name="fullname" value="[+view.fullname+]" required="required"/>
+        </div>
+        <div class="form-group required">
+            <label for="UserProfileEmail">[+lang.label_email+]</label>
+            <input type="text" class="form-control" id="UserProfileEmail" name="email" value="[+view.email+]" required="required"/>
+        </div>
+        <div class="form-group">
+            <label for="UserProfilePhone">[+lang.label_phone_no+]</label>
+            <input type="text" class="form-control" id="UserProfilePhone" name="phone" value="[+view.phone+]"/>
+        </div>
+        <div class="form-group">
+            <label for="UserProfileMobile">[+lang.label_mobile_no+]</label>
+            <input type="text" class="form-control" id="UserProfileMobile" name="mobilephone" value="[+view.mobilephone+]"/>
+        </div>
+        <div class="form-group">
+            <label for="UserProfileFax">[+lang.label_fax_no+]r</label>
+            <input type="text" class="form-control" id="UserProfileFax" name="fax" value="[+view.fax+]"/>
+        </div>
+        <div class="form-group">
+            <label for="UserProfileState">[+lang.label_state+]</label>
+            <input type="text" class="form-control" id="UserProfileState" name="state" value="[+view.state+]"/>
+        </div>
+        <div class="form-group">
+            <label for="UserProfileZip">[+lang.label_zip+]</label>
+            <input type="text" class="form-control" id="UserProfileZip" name="zip" value="[+view.zip+]"/>
+        </div>
+        [+form.country+]
+        <div class="form-group">
+            <label for="UserProfileDob">[+lang.label_date_birth+]</label>
+            <input type="date" class="form-control" id="UserProfileDob" name="dob" value="[+view.dob+]"/>
+        </div>
+        [+form.gender+]
+        <div class="form-group row">
+            <div class="col-sm-2">
+                <img id="UserProfilePhotoImg" src="[+view.photo+]" alt="[+view.username+]" title="[+view.fullname+]" height="100" width="100"/>
+            </div>
+            <div class="col-sm-10">
+                <label for="UserProfilePhoto">[+lang.label_user_photo+]</label>
+                <input type="hidden" id="UserHiddenPhoto" name="userphoto" value="[+view.photo+]"/>
+                <input type="file" id="UserProfilePhoto" name="photo" value=""/>
+                <span class="help-block">[+lang.message_user_photo+]</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="UserProfileComment">[+lang.label_comment_signature+]</label>
+            <textarea class="form-control" id="UserProfileComment" rows="3" name="comment">[+view.comment+]</textarea>
+        </div>
+        <fieldset>
+            <legend>[+lang.title_change_user_password+]</legend>
+            <p id="UserNewPasswordInfo">[+lang.message_change_user_password+]</p>
+            <div class="form-group">
+                <label for="UserProfilePassword">[+lang.label_new_password+]</label>
+                <input type="password" class="form-control" id="UserProfilePassword" name="password" value=""/>
+            </div>
+            <div class="form-group">
+                <label for="UserProfilePasswordConfirm">[+lang.label_new_password+]</label>
+                <input type="password" class="form-control" id="UserProfilePasswordConfirm" name="password.confirm" value=""/>
+            </div>
+        </fieldset>
+    </fieldset>
+    <button type="submit" class="btn btn-default" name="service" value="saveuserprofile">[+lang.button_save+]</button>
+    <a href="[~[*id*]~]?service=cancel" class="btn btn-default" role="button">[+lang.button_cancel+]</a>
+    <a href="[~[*id*]~]?service=deleteuser" class="btn btn-default" role="button">[+lang.button_delete_user_profile+]</a>
+</form>

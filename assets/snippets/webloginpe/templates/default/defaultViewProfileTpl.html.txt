@@ -1,0 +1,73 @@
+[+wlpe.message+]
+<table id="wlpeViewProfileTable">
+	<tr>
+		<td colspan=2 class="wlpeViewProfileHeader"><h3>[+lang.title_view_user_profile+]</h3></td>
+	</tr>
+	<tr>
+		<td class="wlpeViewAttribute">[+lang.label_username+]:</td>
+		<td class="wlpeViewAttributeValue">[+view.username+]</td>
+	</tr>
+	<tr>
+		<td class="wlpeViewAttribute">[+lang.label_full_name+]:</td>
+		<td class="wlpeViewAttributeValue">[+view.fullname+]</td>
+	</tr>
+	<tr>
+		<td class="wlpeViewAttribute">[+lang.label_email+]:</td>
+		<td class="wlpeViewAttributeValue">[+view.email+]</td>
+	</tr>
+	<tr>
+		<td class="wlpeViewAttribute">[+lang.label_phone_no+]:</td>
+		<td class="wlpeViewAttributeValue">[+view.phone+]</td>
+	</tr>
+	<tr>
+		<td class="wlpeViewAttribute">[+lang.label_mobile_no+]:</td>
+		<td class="wlpeViewAttributeValue">[+view.mobilephone+]</td>
+	</tr>
+	<tr>
+		<td class="wlpeViewAttribute">[+lang.label_fax_no+]:</td>
+		<td class="wlpeViewAttributeValue">[+view.fax+]</td>
+	</tr>
+	<tr>
+		<td class="wlpeViewAttribute">[+lang.label_state+]:</td>
+		<td class="wlpeViewAttributeValue">[+view.state+]</td>
+	</tr>
+	<tr>
+		<td class="wlpeViewAttribute">[+lang.label_country+]:</td>
+		<td class="wlpeViewAttributeValue">[+view.country+]</td>
+	</tr>
+	<tr>
+		<td class="wlpeViewAttribute">[+lang.label_age+]</td>
+		<td class="wlpeViewAttributeValue">[+view.age+]</td>
+	</tr>
+	<tr>
+		<td class="wlpeViewAttribute">[+lang.gender+]<:</td>
+		<td class="wlpeViewAttributeValue">[+view.gender+]</td>
+	</tr>
+	<tr>
+		<td class="wlpeViewAttribute">[+lang.label_signature+]:</td>
+		<td class="wlpeViewAttributeValue">[+view.comment+]</td>
+	</tr>
+	<tr>
+		<td class="wlpeViewAttribute">[+lang.label_photo+]:</td>
+		<td class="wlpeViewAttributeValue"><img src="[+view.photo+]" alt="[+view.photo+]" title="[+view.username+]" /></td>
+	</tr>
+	<tr>
+		<td colspan="2" class="wlpeViewContact">
+			<form name="wlpeViewContactForm" method="post" action="[~[*id*]~]">
+				<fieldset id="wlpeViewContactFormFieldset">
+					<h4>[+lang.title_contact+]</h4>
+					<label for"wlpeViewContactSubject" id="wlpeViewContactSubjectLabel">[+lang.label_subject+]:
+						<input type="text" id="wlpeViewContactSubject" name="subject" />
+					</label>
+					
+					<label for"wlpeViewContactMessage" id="wlpeViewContactMessageLabel">[+lang.label_message+]:
+						<textarea id="wlpeViewContactMessage" name="message"></textarea>
+					</label>
+				</fieldset>
+				<fieldset id="wlpeViewContactButtons">
+					<button type="submit" id="wlpeContactSend" name="service" value="messageuser">[+lang.button_send_message+]</button>
+				</fieldset>
+			</form>
+		</td>
+	</tr>
+</table>

@@ -1,0 +1,15 @@
+[+wlpe.message+]
+<div id="UserReset">
+    <form id="UserResetForm" action="[~[*id*]~]" method="post" role="form">
+        <fieldset>
+            <h3>[+lang.title_reset_password+]</h3>
+            <p>[+lang.message_reset_password+]</p>
+            <div class="form-group required">
+                <label for="UserResetEmail">[+lang.label_email+]</label>
+                <input type="text" class="form-control" id="UserResetEmail" name="email" required="required"/>
+            </div>
+        </fieldset>
+        <button type="submit" class="btn btn-default" name="service" value="resetpassword">[+lang.button_send_password+]</button>
+        <a href="[~[*id*]~]?service=cancel" class="btn btn-default" role="button">[+lang.button_cancel+]</a>
+    </form>
+</div>

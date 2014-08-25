@@ -1,0 +1,20 @@
+[+wlpe.message+]
+<form id="UserRegisterForm" action="[~[*id*]~]" method="post" role="form">
+    <fieldset>
+        <p class="info">[+lang.message_register_info+]</p>
+        <div class="form-group required">
+            <label for="UserRegisterEmail">[+lang.label_email+]</label>
+            <input type="text" class="form-control" id="UserRegisterEmail" name="email" required="required"/>
+        </div>
+        <div class="form-group required">
+            <label for="UserRegisterFullName">[+lang.label_full_name+]</label>
+            <input type="text" class="form-control" id="UserRegisterFullName" name="fullname" required="required"/>
+        </div>
+        <div class="form-group required">
+            <label for="UserRegisterUserName">[+lang.label_desired_username+]</label>
+            <input type="text" class="form-control" id="UserRegisterUserName" name="username" required="required"/>
+        </div>
+    </fieldset>
+    <button type="submit" class="btn btn-default" name="service" value="register">[+lang.button_register+]</button>
+    <a href="[~[*id*]~]?service=cancel" class="btn btn-default" role="button">[+lang.button_cancel+]</a>
+</form>

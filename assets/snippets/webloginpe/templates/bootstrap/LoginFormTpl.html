@@ -1,0 +1,28 @@
+[+wlpe.message+]
+<form id="UserLoginForm" action="[~[*id*]~]" method="post" role="form">
+    <fieldset>
+        <legend>[+lang.title_login+]</legend>
+        <div class="form-group required">
+            <label for="UserUsername">[+lang.label_username+]</label>
+            <input type="text" class="form-control" id="UserUsername" name="username" required="required"/>
+        </div>
+        <div class="form-group required">
+            <label for="UserPassword">[+lang.label_password+]</label>
+            <input type="password" class="form-control" id="UserPassword" name="password" required="required"/>
+        </div>
+        <div class="form-group">
+            <label for="UserStayLoggedIn">[+lang.label_stayloggedin+]</label>
+            <select class="form-control" id="UserStayLoggedIn" name="stayloggedin">
+                <option value="">[+lang.option_stayloggedin_no+]</option>
+                <option value="3600">[+lang.option_stayloggedin_1h+]</option>
+                <option value="86400">[+lang.option_stayloggedin_1d+]</option>
+                <option value="604800">[+lang.option_stayloggedin_12+]</option>
+                <option value="2678400">[+lang.option_stayloggedin_1m+]</option>
+                <option value="315569260">[+lang.option_stayloggedin_ever+]</option>
+            </select>
+        </div>
+    </fieldset>
+    <button type="submit" class="btn btn-default" name="service" value="login">[+lang.button_login+]</button>
+    <a href="[~[*id*]~]?service=forgot" class="btn btn-default" role="button">[+lang.button_forgot_password+]</a>
+    <a href="[~[*id*]~]?service=registernew" class="btn btn-default" role="button">[+lang.button_register+]</a>
+</form>

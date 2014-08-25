@@ -1,0 +1,32 @@
+[+wlpe.message+]
+<div id="wlpeLogin">
+	<form id="wlpeLoginForm" action="[~[*id*]~]" method="POST">
+		<fieldset id="wlpeLoginFieldset">
+			<legend id="wlpeLegend">[+lang.title_login+]</legend>
+			<label id="wlpeUsernameLabel" for="wlpeUsername">[+lang.label_username+]
+				<input id="wlpeUsername" type="text" name="username" />
+			</label>
+			
+			<label id="wlpePasswordLabel" for="wlpePassword">[+lang.label_password+]
+				<input id="wlpePassword" type="password" name="password" />
+			</label>
+			
+			<label id="wlpeStayLoggedInLabel" for="wlpeStayLoggedIn">[+lang.label_stayloggedin+]
+				<select id="wlpeStayLoggedIn" name="stayloggedin">
+					<option value="">[+lang.option_stayloggedin_no+]</option>
+					<option value="3600">[+lang.option_stayloggedin_1h+]</option>
+					<option value="86400">[+lang.option_stayloggedin_1d+]</option>
+					<option value="604800">[+lang.option_stayloggedin_1w+]</option>
+					<option value="2678400">[+lang.option_stayloggedin_1m+]</option>
+					<option value="315569260">[+lang.option_stayloggedin_ever+]</option>
+				</select>
+			</label>
+			
+		</fieldset>
+		<fieldset id="wlpeLoginButtons">
+			<button type="submit" id="wlpeLoginButton" name="service" value="login">[+lang.button_login+]</button>
+			<button type="submit" id="wlpeReminderButton" name="service" value="forgot">[+lang.button_forgot_password+]</button>
+			<button type="submit" id="wlpeRegisterButton" name="service" value="registernew">[+lang.button_register+]</button>
+		</fieldset>
+	</form>
+</div>

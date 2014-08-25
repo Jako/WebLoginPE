@@ -1,0 +1,75 @@
+[+wlpe.message+]
+<form enctype="multipart/form-data" id="UserProfileForm" action="[~[*id*]~]" method="post" role="form">
+    <fieldset>
+        <legend>[+lang.title_profile+]</legend>
+        <div id="UserInfo">
+            <h3>[+lang.title_welcome+]</h3>
+            <p class="info">[+lang.message_edit_profile+]</p>
+        </div>
+        <div class="form-group required">
+            <label for="UserProfileFullName">[+lang.label_full_name+]</label>
+            <input type="text" class="form-control" id="UserProfileFullName" name="fullname" value="[+user.fullname+]" required="required"/>
+        </div>
+        <div class="form-group required">
+            <label for="UserProfileEmail">[+lang.label_email+]</label>
+            <input type="text" class="form-control" id="UserProfileEmail" name="email" value="[+user.email+]" required="required"/>
+        </div>
+        <div class="form-group">
+            <label for="UserProfilePhone">[+lang.label_phone_no+]</label>
+            <input type="text" class="form-control" id="UserProfilePhone" name="phone" value="[+user.phone+]"/>
+        </div>
+        <div class="form-group">
+            <label for="UserProfileMobile">[+lang.label_mobile_no+]</label>
+            <input type="text" class="form-control" id="UserProfileMobile" name="mobilephone" value="[+user.mobilephone+]"/>
+        </div>
+        <div class="form-group">
+            <label for="UserProfileFax">[+lang.label_fax_no+]</label>
+            <input type="text" class="form-control" id="UserProfileFax" name="fax" value="[+user.fax+]"/>
+        </div>
+        <div class="form-group">
+            <label for="UserProfileState">[+lang.label_state+]</label>
+            <input type="text" class="form-control" id="UserProfileState" name="state" value="[+user.state+]"/>
+        </div>
+        <div class="form-group">
+            <label for="UserProfileZip">[+lang.label_zip+]</label>
+            <input type="text" class="form-control" id="UserProfileZip" name="zip" value="[+user.zip+]"/>
+        </div>
+        [+form.country+]
+        <div class="form-group">
+            <label for="UserProfileDob">[+lang.label_date_birth+]</label>
+            <input type="date" class="form-control" id="UserProfileDob" name="dob" value="[+user.dob+]"/>
+        </div>
+        [+form.gender+]
+        <div class="form-group row">
+            <div class="col-sm-2">
+                <img id="UserProfilePhotoImg" src="[+user.photo+]" alt="[+user.username+]" title="[+user.fullname+]" height="100" width="100"/>
+            </div>
+            <div class="col-sm-10">
+                <label for="UserProfilePhoto">[+lang.label_user_photo+]</label>
+                <input type="hidden" id="UserHiddenPhoto" name="userphoto" value="[+user.photo+]"/>
+                <input type="file" id="UserProfilePhoto" name="photo" value=""/>
+                <span class="help-block">[+lang.message_user_photo+]</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="UserProfileComment">[+lang.label_comment_signature+]</label>
+            <textarea class="form-control" id="UserProfileComment" rows="3" name="comment">[+user.comment+]</textarea>
+        </div>
+        <fieldset>
+            <legend>[+lang.title_change_password+]</legend>
+            <p id="UserNewPasswordInfo">[+lang.message_change_password+]</p>
+            <div class="form-group">
+                <label for="UserProfilePassword">[+lang.label_new_password+]</label>
+                <input type="password" class="form-control" id="UserProfilePassword" name="password" value=""/>
+            </div>
+            <div class="form-group">
+                <label for="UserProfilePasswordConfirm">[+lang.label_new_password_confirm+]</label>
+                <input type="password" class="form-control" id="UserProfilePasswordConfirm" name="password.confirm" value=""/>
+            </div>
+        </fieldset>
+    </fieldset>
+    <button type="submit" class="btn btn-default" name="service" value="saveprofile">[+lang.button_save+]</button>
+    <a href="[~[*id*]~]?service=cancel" class="btn btn-default" role="button">[+lang.button_cancel+]</a>
+    <a href="[~[*id*]~]?service=logout" class="btn btn-default" role="button">[+lang.button_logout+]</a>
+    <a href="[~[*id*]~]?service=deleteprofile" class="btn btn-default" role="button">[+lang.button_delete_profile+]</a>
+</form>

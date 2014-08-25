@@ -1,0 +1,22 @@
+[+wlpe.message+]
+<form id="UserActivateForm" action="[~[*id*]~]" method="post" role="form">
+    <fieldset>
+        <legend>[+lang.title_activate+]</legend>
+        <input type="hidden" name="userid" value="[+request.userid+]"/>
+        <input type="hidden" name="activationkey" value="[+request.activationkey+]"/>
+
+        <div class="form-group">
+            <label for="UserActivationPassword">[+lang.label_activation_password+]</label>
+            <input type="text" class="form-control" id="UserActivationPassword" name="activationpassword" placeholder="[+lang.label_activation_password+]"/>
+        </div>
+        <div class="form-group">
+            <label for="UserNewPassword">[+lang.label_new_password+]</label>
+            <input type="password" class="form-control" id="UserNewPassword" name="newpassword" placeholder="[+lang.label_new_password+]"/>
+        </div>
+        <div class="form-group">
+            <label for="UserNewPasswordConfirm">[+lang.label_new_password_confirm+]</label>
+            <input type="password" class="form-control" id="UserNewPasswordConfirm" name="newpassword.confirm" placeholder="[+lang.label_new_password_confirm+]"/>
+        </div>
+    </fieldset>
+    <button type="submit" class="btn btn-default" name="service" value="activated">[+lang.button_activate+]</button>
+</form>

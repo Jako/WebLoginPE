@@ -1,0 +1,15 @@
+[+wlpe.message+]
+<div id="wlpeProfileDelete">
+	<form id="wlpeProfileDeleteForm" name="profileDelteForm" action="[~[*id*]~]" method="POST">
+		<fieldset id="wlpeProfileDeleteFieldset">
+			<legend id="wlpeProfileDeleteFieldsetLegend">[+lang.title_delete_profile+]</legend>
+			<h1 id="wlpeProfileDeleteWarning" class="warning">[+lang.message_warning+]</h1>
+			<p>[+lang.message_confim_delete+]</p>
+			
+		</fieldset>
+		<fieldset id="wlpeProfileDeleteButtonsFieldset">
+			<button type="submit" id="wlpeProfileDeleteButton" name="service" value="confirmdeleteprofile">[+lang.button_delete+]</button>
+			<button type="submit" id="wlpeProfileCancelButton" name="service" value="cancel">[+lang.button_cancel+]</button>
+		</fieldset>
+	</form>
+</div>

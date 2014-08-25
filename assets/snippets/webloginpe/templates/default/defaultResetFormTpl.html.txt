@@ -1,0 +1,17 @@
+[+wlpe.message+]
+<div id="wlpeReset">
+	<form id="wlpeResetForm" name="wlpeResetForm" action="[~[*id*]~]" method="POST">
+		<fieldset id="wlpeResetFieldset">
+			<h3 id="wlpeResetInfo">[+lang.title_reset_password+]</h3>
+			<p>[+lang.message_reset_password+]</p>
+			<label for="wlpeResetEmail">[+lang.label_email+]
+			<input type="text" id="wlpeResetEmail" name="email" />
+			</label>
+			
+		</fieldset>
+		<fieldset id="wlpeResetButtonFieldset">
+			<button type="submit" id="wlpeResetButton" name="service" value="resetpassword">[+lang.button_send_password+]</button>
+			<button type="submit" id="wlpeResetCancelButton" name="service" value="cancel">[+lang.button_cancel+]</button>
+		</fieldset>
+	</form>
+</div>

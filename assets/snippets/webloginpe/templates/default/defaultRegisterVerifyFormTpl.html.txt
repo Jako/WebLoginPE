@@ -1,0 +1,26 @@
+[+wlpe.message+]
+<div id="wlpeRegister">
+	<form id="wlpeRegisterForm" name="wlpeRegisterForm" action="[~[*id*]~]" method="POST">
+		<fieldset id="wlpeRegisterFieldset">
+			<p class="wlpeRegisterInfo">[+lang.message_register_info1+]</p>
+			<p class="wlpeRegisterInfo">[+lang.message_register_info2+]</p>
+			
+			<label for="wlpeRegisterEmail">[+lang.label_email+]
+			<input type="text" id="wlpeRegisterEmail" name="email" />
+			</label>
+			
+			<label for="wlpeRegisterFullName">[+lang.label_full_name+]
+			<input type="text" id="wlpeRegisterFullName" name="fullname" />
+			</label>
+			
+			<label for="wlpeRegisterUserName">[+lang.label_desired_username+]
+			<input type="text" id="wlpeRegisterUserName" name="username" />
+			</label>
+			
+		</fieldset>
+		<fieldset id="wlpeRegisterButtonFieldset">
+			<button type="submit" id="wlpeRegisterButton" name="service" value="register">[+lang.button_register+]</button>
+			<button type="submit" id="wlpeRegisterCancelButton" name="service" value="cancel">[+lang.button_cancel+]</button>
+		</fieldset>
+	</form>
+</div>

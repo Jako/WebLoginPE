@@ -1,0 +1,72 @@
+[+wlpe.message+]
+<table id="UserViewProfileTable">
+    <tr>
+        <td colspan=2 class="UserViewProfileHeader"><h3>[+lang.title_view_user_profile+]</h3></td>
+    </tr>
+    <tr>
+        <td class="UserViewAttribute">[+lang.label_username+]</td>
+        <td class="UserViewAttributeValue">[+view.username+]</td>
+    </tr>
+    <tr>
+        <td class="UserViewAttribute">[+lang.label_full_name+]</td>
+        <td class="UserViewAttributeValue">[+view.fullname+]</td>
+    </tr>
+    <tr>
+        <td class="UserViewAttribute">[+lang.label_email+]</td>
+        <td class="UserViewAttributeValue">[+view.email+]</td>
+    </tr>
+    <tr>
+        <td class="UserViewAttribute">[+lang.label_phone_no+]</td>
+        <td class="UserViewAttributeValue">[+view.phone+]</td>
+    </tr>
+    <tr>
+        <td class="UserViewAttribute">[+lang.label_mobile_no+]</td>
+        <td class="UserViewAttributeValue">[+view.mobilephone+]</td>
+    </tr>
+    <tr>
+        <td class="UserViewAttribute">[+lang.label_fax_no+]</td>
+        <td class="UserViewAttributeValue">[+view.fax+]</td>
+    </tr>
+    <tr>
+        <td class="UserViewAttribute">[+lang.label_state+]</td>
+        <td class="UserViewAttributeValue">[+view.state+]</td>
+    </tr>
+    <tr>
+        <td class="UserViewAttribute">[+lang.label_country+]</td>
+        <td class="UserViewAttributeValue">[+view.country+]</td>
+    </tr>
+    <tr>
+        <td class="UserViewAttribute">[+lang.label_age+]</td>
+        <td class="UserViewAttributeValue">[+view.age+]</td>
+    </tr>
+    <tr>
+        <td class="UserViewAttribute">[+lang.gender+]:</td>
+        <td class="UserViewAttributeValue">[+view.gender+]</td>
+    </tr>
+    <tr>
+        <td class="UserViewAttribute">[+lang.label_signature+]:</td>
+        <td class="UserViewAttributeValue">[+view.comment+]</td>
+    </tr>
+    <tr>
+        <td class="UserViewAttribute">[+lang.label_photo+]:</td>
+        <td class="UserViewAttributeValue"><img src="[+view.photo+]" alt="[+view.photo+]" title="[+view.username+]"/></td>
+    </tr>
+    <tr>
+        <td colspan="2" class="UserViewContact">
+            <form id="UserViewContact" action="[~[*id*]~]" method="post" role="form">
+                <fieldset>
+                    <h4>[+lang.title_contact+]</h4>
+                    <div class="form-group">
+                        <label for="UserViewContactSubject">[+lang.label_subject+]:</label>
+                        <input type="text" class="form-control" id="UserViewContactSubject" name="subject"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="UserViewContactMessage">[+lang.label_message+]:</label>
+                        <textarea class="form-control" id="UserViewContactMessage" name="message"></textarea>
+                    </div>
+                </fieldset>
+                <button type="submit" class="btn btn-default" name="service" value="messageuser">[+lang.button_send_message+]</button>
+            </form>
+        </td>
+    </tr>
+</table>

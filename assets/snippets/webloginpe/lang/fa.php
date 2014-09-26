@@ -1,1 +1,147 @@
-<?php// WebLoginPE Persian Language file by MotSmart 08-SEP-2007//WebLoginPE Class language strings.$wlpe_lang['error_required_fields_blank'] = 'شما برخي از فيلدها را خالي گذاشته ايد.';$wlpe_lang['error_username_length'] = 'نام كاربري بلند است. بايستي كمتر از 20 حرف باشد.';$wlpe_lang['error_fields_not_match'] = 'كلمات عبور يكي نيستند. لطفا تكرار كنيد.';$wlpe_lang['error_password_too_short'] = 'كلمه عبور كوتاه است. لطفا حداقل 6 حرفي باشد.';$wlpe_lang['error_password_illegal_characters'] = 'كلمه عبور شما حروف ممنوعه دارد. لطفا از حروف [a-z][A-Z] و اعداد[0-9] استفاده كنيد.';$wlpe_lang['error_login_fields_blank'] = 'برخي از فيلدها ي لازم خالي گذاشته شده.';$wlpe_lang['error_invalid_captcha_code'] = 'كد اشتباه است. لطفا كد نمايش داده شده در تصوير را به درستي وارد كنيد.';$wlpe_lang['error_username_in_use'] = 'شرمنده, اين نام كاربري قبلا گرفته شده. لطفا نام كاربري ديگري انتخاب كنيد.';$wlpe_lang['error_email_in_use'] = 'شرمنده, كاربري با همين آدرس ايميل داريم. شما نميتوانيد همان ايميل را مجددا انتخاب كنيد.';$wlpe_lang['error_register_account'] = 'خطايي به هنگام ثبت اطلاعات كاربري شما پيش آمده.';$wlpe_lang['error_save_account'] = 'خطايي به هنگام ثبت اطلاعات حساب شما پيش آمده.';$wlpe_lang['error_update_webgroups'] = 'خطايي به هنگام به روز رساني وب گروه ها پيش آمده.';$wlpe_lang['error_sending_email'] = 'خطايي به هنگام ارسال ايميل پيش آمده. لطفا با پشتيبان وبگاه تماس حاصل كنيد.';$wlpe_lang['error_remove_account'] = 'خطايي به هنگام حذف كاربري شما ايجاد شده.';$wlpe_lang['error_email_not_active'] = 'براي اين ايميل كاربري (فعال) وجود ندارد';$wlpe_lang['error_load_account'] = 'بروز خطا به هنگام بازخواني حساب كاربر. لطفا با پشتيبان وبگاه تماس حاصل كنيد.';$wlpe_lang['error_invalid_activation_key'] = 'كلمه عبور يا لينك فعال سازي اشتباه است. حساب شما فعال نشده است.';$wlpe_lang['error_activating_password'] = 'بروز خطا به هنگام فعالسازي كلمه عبور. شرمنده.';$wlpe_lang['error_password_incorrect'] = 'كلمه عبور اشتباه است. مجددا امتحان كنيد.';$wlpe_lang['error_too_many_failed_logins'] = 'تلاش بيش از حد و ناموفق براي ورود. حساب شما بلوكه شده. شما ميتوانيد پس از [+000+] دقيقه مجددا امتحان كنيد.';$wlpe_lang['error_password_incorrect_message'] = '<p>كلمه عبور اشتباه است.</p><p>دفعات تلاش ناموفق براي ورود [+000+] بار بوده. شما به مدت [+111+] دقيقه بلوكه ميشويد براي بيش از[+222+] بار تلاش ناموفق.</p><p>لطفا مجددا امتحان كنيد.</p><p>شايد كلمه ي عبور خود را <a href="[~[*id*]~]&service=forgot">فراموش كرده ايد؟</a></p>';$wlpe_lang['error_invalid_username'] = 'كلمه عبور موجود نيست.';$wlpe_lang['error_blocked_message'] = 'به دليل تعداد زياد تلاش ناموفق براي ورود, شما بلوكه شديد!';$wlpe_lang['error_blocked'] = 'شما بلوكه شديد و نميتوانيد وارد شويد!';$wlpe_lang['error_blocked_time_message'] = 'شما الان نميتوانيد وارد شويد. شما به مدت [+000+] دقيقه بلوكه شديد.';$wlpe_lang['error_blocked_ip'] = 'شما اجازه ورود به اين بخش را نداريد.';$wlpe_lang['error_blocked_timerange'] = 'شما الان اجازه ورود نداريد. لطفا بعدا امتحان كنيد.';$wlpe_lang['error_format_birthdate'] = 'بروز خطا در شاكله ي تاريخ تولد شما. لطفا به صورت سال-روز-ماه وارد كنيد MM-DD-YYYY';$wlpe_lang['error_image_too_large'] = 'تصوير شما خيلي بزرگ است. حجم آنرا كمتر از 100 كيلوبايت نگه داريد';$wlpe_lang['error_image_upload'] = 'قادر به آپلود تصوير نيست. لطفا سطوح دسترسي به پوشه ي تصاوير كاربران  "userimages" را چك كنيد.';$wlpe_lang['error_image_type'] = 'فرمت مايم فايلهاي تصاوير بايستي از نوع "image/jpeg", "image/gif", يا "image/png" باشد.';$wlpe_lang['error_invalid_chunk'] = 'چانكي به اين نام كه وارد كرده ايد وجود ندارد و يا حاوي اطلاعاتي نيست. لطفا اسم آنرا مرور كنيد. قالب پيشفرض فعلا به جاي آن به كار گرفته خواهد شد.';$wlpe_lang['error_username_invalid_charakters'] = 'نام كاربري شما حروف غير مجاز دارد. لطفا فقط از حروف [a-z][A-Z] و اعداد[0-9] استفاده كنيد.';$wlpe_lang['unknown'] = 'ناشناخته';$wlpe_lang['error_agree_tos'] = 'شما بايستي با شرايط استفاده موافقت كنيد.';$wlpe_lang['message_user_deleted'] = 'كاربر فعال نشده حذف شد';$wlpe_lang['message_user_deleted_text'] = 'كاربري "[+000+]" حذف شد. "[+000+]" در تاريخ [+111+] ثبت شده بود و حساب خود را از طريق ورود فعال نكرده بود.';$wlpe_lang['message_sent_to'] = 'پيام شما ارسال شد به ';//Snippet Strings$wlpe_lang['message_account_created'] = 'جزييات حساب كاربري جديد خود را در ايميل خود چك كنيد. چنانچه ايميل دريافت نكرديد با مدير وبگاه تماس حاصل كنيد ';$wlpe_lang['message_account_updated'] = 'حساب شما به روز شد.';$wlpe_lang['message_account_deleted'] = 'حساب شما حذف شد.';$wlpe_lang['message_account_password_activate'] = 'به منظور آگاهي از نحوه فعالسازي كلمه عبور جديد خود ايميل خود را چك كنيد.';$wlpe_lang['message_password_activated'] = 'كلمه عبور جديد شما فعال شد.';$wlpe_lang['error_missing_language_file'] = 'فايل زباني با اين نام موجود نيست. فايل زبان انگليسي به جاي آن استفاده خواهد شد.';?>
+<?php
+//WebLoginPE Class language strings.
+$wlpe_lang['error_required_fields_blank'] = 'شما برخي از فيلدها را خالي گذاشته ايد.';
+$wlpe_lang['error_username_length'] = 'نام كاربري بلند است. بايستي كمتر از 20 حرف باشد.';
+$wlpe_lang['error_fields_not_match'] = 'كلمات عبور يكي نيستند. لطفا تكرار كنيد.';
+$wlpe_lang['error_password_too_short'] = 'كلمه عبور كوتاه است. لطفا حداقل 6 حرفي باشد.';
+$wlpe_lang['error_password_illegal_characters'] = 'كلمه عبور شما حروف ممنوعه دارد. لطفا از حروف [a-z][A-Z] و اعداد[0-9] استفاده كنيد.';
+$wlpe_lang['error_login_fields_blank'] = 'برخي از فيلدها ي لازم خالي گذاشته شده.';
+$wlpe_lang['error_invalid_captcha_code'] = 'كد اشتباه است. لطفا كد نمايش داده شده در تصوير را به درستي وارد كنيد.';
+$wlpe_lang['error_username_in_use'] = 'شرمنده, اين نام كاربري قبلا گرفته شده. لطفا نام كاربري ديگري انتخاب كنيد.';
+$wlpe_lang['error_email_in_use'] = 'شرمنده, كاربري با همين آدرس ايميل داريم. شما نميتوانيد همان ايميل را مجددا انتخاب كنيد.';
+$wlpe_lang['error_register_account'] = 'خطايي به هنگام ثبت اطلاعات كاربري شما پيش آمده.';
+$wlpe_lang['error_save_account'] = 'خطايي به هنگام ثبت اطلاعات حساب شما پيش آمده.';
+$wlpe_lang['error_update_webgroups'] = 'خطايي به هنگام به روز رساني وب گروه ها پيش آمده.';
+$wlpe_lang['error_sending_email'] = 'خطايي به هنگام ارسال ايميل پيش آمده. لطفا با پشتيبان وبگاه تماس حاصل كنيد.';
+$wlpe_lang['error_remove_account'] = 'خطايي به هنگام حذف كاربري شما ايجاد شده.';
+$wlpe_lang['error_email_not_active'] = 'براي اين ايميل كاربري (فعال) وجود ندارد';
+$wlpe_lang['error_load_account'] = 'بروز خطا به هنگام بازخواني حساب كاربر. لطفا با پشتيبان وبگاه تماس حاصل كنيد.';
+$wlpe_lang['error_invalid_activation_key'] = 'كلمه عبور يا لينك فعال سازي اشتباه است. حساب شما فعال نشده است.';
+$wlpe_lang['error_activating_password'] = 'بروز خطا به هنگام فعالسازي كلمه عبور. شرمنده.';
+$wlpe_lang['error_password_incorrect'] = 'كلمه عبور اشتباه است. مجددا امتحان كنيد.';
+$wlpe_lang['error_too_many_failed_logins'] = 'تلاش بيش از حد و ناموفق براي ورود. حساب شما بلوكه شده. شما ميتوانيد پس از [+000+] دقيقه مجددا امتحان كنيد.';
+$wlpe_lang['error_password_incorrect_message'] = '<p>كلمه عبور اشتباه است.</p><p>دفعات تلاش ناموفق براي ورود [+000+] بار بوده. شما به مدت [+111+] دقيقه بلوكه ميشويد براي بيش از[+222+] بار تلاش ناموفق.</p><p>لطفا مجددا امتحان كنيد.</p><p>شايد كلمه ي عبور خود را <a href="[~[*id*]~]&service=forgot">فراموش كرده ايد؟</a></p>';
+$wlpe_lang['error_invalid_username'] = 'كلمه عبور موجود نيست.';
+$wlpe_lang['error_blocked_message'] = 'به دليل تعداد زياد تلاش ناموفق براي ورود, شما بلوكه شديد!';
+$wlpe_lang['error_blocked'] = 'شما بلوكه شديد و نميتوانيد وارد شويد!';
+$wlpe_lang['error_blocked_time_message'] = 'شما الان نميتوانيد وارد شويد. شما به مدت [+000+] دقيقه بلوكه شديد.';
+$wlpe_lang['error_blocked_ip'] = 'شما اجازه ورود به اين بخش را نداريد.';
+$wlpe_lang['error_blocked_timerange'] = 'شما الان اجازه ورود نداريد. لطفا بعدا امتحان كنيد.';
+$wlpe_lang['error_format_birthdate'] = 'بروز خطا در شاكله ي تاريخ تولد شما. لطفا به صورت سال-روز-ماه وارد كنيد MM-DD-YYYY';
+$wlpe_lang['error_image_too_large'] = 'تصوير شما خيلي بزرگ است. حجم آنرا كمتر از 100 كيلوبايت نگه داريد';
+$wlpe_lang['error_image_upload'] = 'قادر به آپلود تصوير نيست. لطفا سطوح دسترسي به پوشه ي تصاوير كاربران  "userimages" را چك كنيد.';
+$wlpe_lang['error_image_type'] = 'فرمت مايم فايلهاي تصاوير بايستي از نوع "image/jpeg", "image/gif", يا "image/png" باشد.';
+$wlpe_lang['error_invalid_chunk'] = 'چانكي به اين نام كه وارد كرده ايد وجود ندارد و يا حاوي اطلاعاتي نيست. لطفا اسم آنرا مرور كنيد. قالب پيشفرض فعلا به جاي آن به كار گرفته خواهد شد.';
+$wlpe_lang['error_username_invalid_charakters'] = 'نام كاربري شما حروف غير مجاز دارد. لطفا فقط از حروف [a-z][A-Z] و اعداد[0-9] استفاده كنيد.';
+$wlpe_lang['error_invalid_email'] = 'The Email address you provided does not appear to be a properly formatted address.';
+$wlpe_lang['unknown'] = 'ناشناخته';
+$wlpe_lang['error_agree_tos'] = 'شما بايستي با شرايط استفاده موافقت كنيد.';
+$wlpe_lang['message_user_deleted'] = 'كاربر فعال نشده حذف شد';
+$wlpe_lang['message_user_deleted_text'] = 'كاربري "[+000+]" حذف شد. "[+000+]" در تاريخ [+111+] ثبت شده بود و حساب خود را از طريق ورود فعال نكرده بود.';
+$wlpe_lang['message_sent_to'] = 'پيام شما ارسال شد به ';
+$wlpe_lang['private'] = 'Private';
+$wlpe_lang['country'] = 'Country';
+$wlpe_lang['gender'] = 'Gender';
+$wlpe_lang['male'] = 'Männlich';
+$wlpe_lang['female'] = 'Weiblich';
+$wlpe_lang['online'] = 'Online';
+$wlpe_lang['offline'] = 'Offline';
+$wlpe_lang['locale'] = 'en_US.UTF-8';
+$wlpe_lang['language'] = 'english';
+
+$wlpe_lang['label_activation_password'] = 'Activation password';
+$wlpe_lang['label_new_password'] = 'New Password';
+$wlpe_lang['label_new_password_confirm'] = 'New Password (Confirm)';
+$wlpe_lang['label_username'] = 'Username';
+$wlpe_lang['label_desired_username'] = 'Desired User Name';
+$wlpe_lang['label_password'] = 'Password';
+$wlpe_lang['label_password_confirm'] = 'Password (Confirm)';
+$wlpe_lang['label_stayloggedin'] = 'Stay Logged In';
+$wlpe_lang['label_age'] = 'Age';
+$wlpe_lang['label_current_status'] = 'Current Status';
+$wlpe_lang['label_full_name'] = 'Full Name';
+$wlpe_lang['label_email'] = 'Email';
+$wlpe_lang['label_phone_no'] = 'Phone number';
+$wlpe_lang['label_mobile_no'] = 'Mobile number';
+$wlpe_lang['label_fax_no'] = 'Fax number';
+$wlpe_lang['label_state'] = 'State';
+$wlpe_lang['label_zip'] = 'Zip Code';
+$wlpe_lang['label_country'] = 'Country';
+$wlpe_lang['label_date_birth'] = 'Date of birth';
+$wlpe_lang['label_comment_signature'] = 'Comment/Signature';
+$wlpe_lang['label_signature'] = 'Signature';
+$wlpe_lang['label_user_photo'] = 'User Photo';
+$wlpe_lang['label_photo'] = 'Photo';
+$wlpe_lang['label_subject'] = 'Subject';
+$wlpe_lang['label_message'] = 'Message';
+$wlpe_lang['label_captcha'] = 'Please enter the code in the image.';
+$wlpe_lang['label_tos'] = 'Terms of Service/Privacy Policy';
+$wlpe_lang['label_tos_accept'] = 'I accept the Terms of Service';
+$wlpe_lang['label_tos_accept_modal'] = 'I accept the <a href="#" data-toggle="modal" data-target="#tosModal">Terms of Service</a>';
+$wlpe_lang['label_last_login'] = 'Last Login';
+
+$wlpe_lang['option_stayloggedin_no'] = 'No';
+$wlpe_lang['option_stayloggedin_1h'] = '1 Hour';
+$wlpe_lang['option_stayloggedin_1d'] = '1 Day';
+$wlpe_lang['option_stayloggedin_1w'] = '1 Week';
+$wlpe_lang['option_stayloggedin_1m'] = '1 Month';
+$wlpe_lang['option_stayloggedin_ever'] = 'Forever';
+
+$wlpe_lang['button_activate'] = 'Activate';
+$wlpe_lang['button_login'] = 'Login';
+$wlpe_lang['button_forgot_password'] = 'Forgot Password';
+$wlpe_lang['button_send_password'] = 'Send Password';
+$wlpe_lang['button_register'] = 'Register';
+$wlpe_lang['button_edit_user'] = 'Edit [+view.username+]';
+$wlpe_lang['button_delete_user'] = 'Delete [+view.username+]';
+$wlpe_lang['button_logout'] = 'Logout';
+$wlpe_lang['button_profile'] = 'Profile';
+$wlpe_lang['button_save'] = 'Save';
+$wlpe_lang['button_close'] = 'Close';
+$wlpe_lang['button_cancel'] = 'Cancel';
+$wlpe_lang['button_delete'] = 'Delete';
+$wlpe_lang['button_delete_user_profile'] = 'Delete This Profile';
+$wlpe_lang['button_delete_profile'] = 'Delete My Profile';
+$wlpe_lang['button_send_message'] = 'Send Message to [+view.username+]';
+
+$wlpe_lang['title_login'] = 'Web User Login';
+$wlpe_lang['title_activate'] = 'Web User Aktivate';
+$wlpe_lang['title_welcome'] = 'Hello [+user.fullname+] ([+user.username+])!';
+$wlpe_lang['title_welcome_back'] = 'Welcome back [+user.username+]!';
+$wlpe_lang['title_delete_user_profile'] = 'Delete User Profile';
+$wlpe_lang['title_delete_profile'] = 'Delete Your Profile';
+$wlpe_lang['title_edit_user_profile'] = 'Editing the profile of [+view.username+] ([+view.fullname+])';
+$wlpe_lang['title_view_user_profile'] = 'Viewing the profile of [+view.username+]';
+$wlpe_lang['title_user_profile'] = '[+view.username+]\'s User Profile';
+$wlpe_lang['title_profile'] = 'Your User Profile';
+$wlpe_lang['title_change_user_password'] = 'Change password';
+$wlpe_lang['title_change_password'] = 'Change your password';
+$wlpe_lang['title_new_account'] = 'Register for a new user account';
+$wlpe_lang['title_reset_password'] = 'Don\'t Worry, it happens to everyone.';
+$wlpe_lang['title_contact'] = 'Contact [+view.username+]';
+
+$wlpe_lang['message_login'] = 'You have logged into [(site_name)] [+user.logincount+] times now.<br />Your last login was [+user.lastlogin+]';
+$wlpe_lang['message_warning'] = 'WARNING!';
+$wlpe_lang['message_confim_user_delete'] = 'You are about to delete the profile of &quot;[+post.username+]&quot;. Are you sure you want to continue?';
+$wlpe_lang['message_confim_delete'] = 'You are about to delete your profile. Are you sure you want to continue?';
+$wlpe_lang['message_edit_user_profile'] = 'Use this form to edit [+view.username+]\'s profile information';
+$wlpe_lang['message_edit_profile'] = 'Use this form to update your profile information.<br />[+lang.message_required+]';
+$wlpe_lang['message_change_user_password'] = 'Change the password <br /><span class="info">(leave blank if you do not want to set a new password for this user).';
+$wlpe_lang['message_change_password'] = 'Change your password <br /><span class="info">(leave blank if you do not want a new password).';
+$wlpe_lang['message_user_photo'] = 'No bigger than 100kb. will be resized to 100 x 100.';
+$wlpe_lang['message_notify'] = 'Hello, my name is [+ufn+] and I just signed up at [+sname+] as "[+uid+]".
+
+My email address is [+uem+].';
+$wlpe_lang['message_captcha'] = 'If you have trouble reading the code, click on the code itself to generate a new random code.';
+$wlpe_lang['message_new_account'] = 'Use this form to register for a new user account.<br />[+lang.message_required+]';
+$wlpe_lang['message_register_info'] = 'Enter your email address, your name, and your desired username in the fields below. A password will be emailed to you with instructions on how to activate Your account.';
+$wlpe_lang['message_reset_password'] = 'Enter your email address in the field below and we will set a temporary password for your account. This temporary password will be emailed to you with instructions on how to activate it.';
+$wlpe_lang['message_required'] = '<span class="info">Fields marked with <span class="required">*</span> are required.</span>';
+$wlpe_lang['message_account_created'] = 'جزييات حساب كاربري جديد خود را در ايميل خود چك كنيد. چنانچه ايميل دريافت نكرديد با مدير وبگاه تماس حاصل كنيد ';
+$wlpe_lang['message_account_updated'] = 'حساب شما به روز شد.';
+$wlpe_lang['message_account_deleted'] = 'حساب شما حذف شد.';
+$wlpe_lang['message_account_password_activate'] = 'به منظور آگاهي از نحوه فعالسازي كلمه عبور جديد خود ايميل خود را چك كنيد.';
+$wlpe_lang['message_password_activated'] = 'كلمه عبور جديد شما فعال شد.';
+
+$wlpe_lang['error_missing_language_file'] = 'فايل زباني با اين نام موجود نيست. فايل زبان انگليسي به جاي آن استفاده خواهد شد.';
+?>

@@ -1,0 +1,9 @@
+[main]
+host = https://www.transifex.com
+lang_map = bg: bg, cs: cz, da: da, de: de, es: es, fa: fa, fi: fi, fr: fr, he: he, it: it, ja: ja, nl: nl, no: norsk, pl: pl, pt_BR: pt_BR, pt: pt, ru: ru, sv: sv, zh: zh
+
+[modx-evolution-extras.webloginpe]
+file_filter = assets/snippets/webloginpe/lang/<lang>.php
+source_file = assets/snippets/webloginpe/lang/en.php
+source_lang = en
+type = PHP_ALT_ARRAY

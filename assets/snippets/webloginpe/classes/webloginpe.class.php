@@ -695,6 +695,20 @@ class WebLoginPE
 
             // Bring in php mailer!
             $Register = new PHPMailer();
+            
+            // enable smtp via modx configuration
+            if ($modx->config['email_method'] == 'smtp')
+            {
+              $Register->IsSMTP(); // telling the class to use SMTP             
+              $Register->SMTPAuth = true;                  
+              $Register->Host = $modx->config['smtp_host']; //host z konfiguracji
+              $Register->Port = $modx->config['smtp_port']; //port z konfiguracji
+              $Register->Username = $modx->config['smtp_username'];  //user z konfiguracji
+              $passsmtp = $modx->config['smtppw']; //zakodowany pass z konfiguracji
+              $passsmtp = base64_decode(substr($passsmtp, 0, strpos($passsmtp, '%')) . '=');
+              $Register->Password = $passsmtp;    
+            }
+            
             $Register->CharSet = $this->modx->config['modx_charset'];
             $Register->From = $myEmail;
             $Register->FromName = $siteName;
@@ -732,6 +746,19 @@ class WebLoginPE
 
             $Notify = new PHPMailer();
             $Notify->CharSet = $this->modx->config['modx_charset'];
+            
+            // enable smtp via modx configuration
+            if ($modx->config['email_method'] == 'smtp')
+            {
+              $Notify->IsSMTP(); // telling the class to use SMTP             
+              $Notify->SMTPAuth   = true;                  
+              $Notify->Host = $modx->config['smtp_host']; //host z konfiguracji
+              $Notify->Port = $modx->config['smtp_port']; //port z konfiguracji
+              $Notify->Username = $modx->config['smtp_username'];  //user z konfiguracji
+              $passsmtp = $modx->config['smtppw']; //zakodowany pass z konfiguracji
+              $passsmtp = base64_decode(substr($passsmtp, 0, strpos($passsmtp, '%')) . '=');
+              $Notify->Password   = $passsmtp; 
+            }		
 
             foreach ($emailArray as $address) {
                 $Notify->From = $email;
@@ -785,6 +812,20 @@ class WebLoginPE
                 $emailsender = $this->modx->config['emailsender'];
 
                 $Pruned = new PHPMailer();
+                
+                // enable smtp via modx configuration
+                if ($modx->config['email_method'] == 'smtp')
+                {
+                  $Pruned->IsSMTP(); // telling the class to use SMTP             
+                  $Pruned->SMTPAuth   = true;                  
+                  $Pruned->Host = $modx->config['smtp_host']; //host z konfiguracji
+                  $Pruned->Port = $modx->config['smtp_port']; //port z konfiguracji
+                  $Pruned->Username = $modx->config['smtp_username'];  //user z konfiguracji
+                  $passsmtp = $modx->config['smtppw']; //zakodowany pass z konfiguracji
+                  $passsmtp = base64_decode(substr($passsmtp, 0, strpos($passsmtp, '%')) . '=');
+                  $Pruned->Password   = $passsmtp; 
+                }	
+    
                 $Pruned->CharSet = $this->modx->config['modx_charset'];
                 $Pruned->From = $this->modx->config['emailsender'];
                 $Pruned->FromName = 'WebLoginPE Pruning Agent';
@@ -1034,6 +1075,20 @@ class WebLoginPE
 
                 // Bring in php mailer!
                 $Register = new PHPMailer();
+                
+                // enable smtp via modx configuration
+                if ($modx->config['email_method'] == 'smtp')
+                {
+                  $Register->IsSMTP(); // telling the class to use SMTP             
+                  $Register->SMTPAuth   = true;                  
+                  $Register->Host = $modx->config['smtp_host']; //host z konfiguracji
+                  $Register->Port = $modx->config['smtp_port']; //port z konfiguracji
+                  $Register->Username = $modx->config['smtp_username'];  //user z konfiguracji
+                  $passsmtp = $modx->config['smtppw']; //zakodowany pass z konfiguracji
+                  $passsmtp = base64_decode(substr($passsmtp, 0, strpos($passsmtp, '%')) . '=');
+                  $Register->Password   = $passsmtp;    
+                }	
+    
                 $Register->CharSet = $this->modx->config['modx_charset'];
                 $Register->From = $myEmail;
                 $Register->FromName = $siteName;
@@ -1593,6 +1648,20 @@ class WebLoginPE
         }
 
         $EmailMessage = new PHPMailer();
+        
+        // enable smtp via modx configuration
+        if ($modx->config['email_method'] == 'smtp')
+        {
+          $EmailMessage->IsSMTP(); // telling the class to use SMTP             
+          $EmailMessage->SMTPAuth   = true;                  
+          $EmailMessage->Host = $modx->config['smtp_host']; //host z konfiguracji
+          $EmailMessage->Port = $modx->config['smtp_port']; //port z konfiguracji
+          $EmailMessage->Username = $modx->config['smtp_username'];  //user z konfiguracji
+          $passsmtp = $modx->config['smtppw']; //zakodowany pass z konfiguracji
+          $passsmtp = base64_decode(substr($passsmtp, 0, strpos($passsmtp, '%')) . '=');
+          $EmailMessage->Password   = $passsmtp; 
+        }	
+    
         $EmailMessage->CharSet = $this->modx->config['modx_charset'];
         $EmailMessage->From = $me['email'];
         $EmailMessage->FromName = $me['fullname'] . " (" . $me['username'] . ")";
@@ -1661,6 +1730,20 @@ class WebLoginPE
             $message = str_replace("[+surl+]", $url, $message);
 
             $Reset = new PHPMailer();
+            
+            // enable smtp via modx configuration
+            if ($modx->config['email_method'] == 'smtp')
+            {
+              $Reset->IsSMTP(); // telling the class to use SMTP             
+              $Reset->SMTPAuth   = true;                  
+              $Reset->Host = $modx->config['smtp_host']; //host z konfiguracji
+              $Reset->Port = $modx->config['smtp_port']; //port z konfiguracji
+              $Reset->Username = $modx->config['smtp_username'];  //user z konfiguracji
+              $passsmtp = $modx->config['smtppw']; //zakodowany pass z konfiguracji
+              $passsmtp = base64_decode(substr($passsmtp, 0, strpos($passsmtp, '%')) . '=');
+              $Reset->Password   = $passsmtp; 
+            }	
+            
             $Reset->CharSet = $this->modx->config['modx_charset'];
             $Reset->From = $emailsender;
             $Reset->FromName = $site_name;

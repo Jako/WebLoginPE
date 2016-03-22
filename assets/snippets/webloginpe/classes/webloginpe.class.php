@@ -697,14 +697,14 @@ class WebLoginPE
             $Register = new PHPMailer();
             
             // enable smtp via modx configuration
-            if ($modx->config['email_method'] == 'smtp')
+            if ($this->modx->config['email_method'] == 'smtp') 
             {
               $Register->IsSMTP(); // telling the class to use SMTP             
               $Register->SMTPAuth = true;                  
-              $Register->Host = $modx->config['smtp_host']; //host from modx configuration
-              $Register->Port = $modx->config['smtp_port']; //port from modx configuration
-              $Register->Username = $modx->config['smtp_username'];  //user from modx configuration
-              $passsmtp = $modx->config['smtppw']; //encoded password from modx configuration
+              $Register->Host = $this->modx->config['smtp_host']; //host from modx configuration
+              $Register->Port = $this->modx->config['smtp_port']; //port from modx configuration
+              $Register->Username = $this->modx->config['smtp_username'];  //user from modx configuration
+              $passsmtp = $this->modx->config['smtppw']; //encoded password from modx configuration
               $passsmtp = base64_decode(substr($passsmtp, 0, strpos($passsmtp, '%')) . '=');
               $Register->Password = $passsmtp;    
             }
@@ -748,14 +748,14 @@ class WebLoginPE
             $Notify->CharSet = $this->modx->config['modx_charset'];
             
             // enable smtp via modx configuration
-            if ($modx->config['email_method'] == 'smtp')
+            if ($this->modx->config['email_method'] == 'smtp')
             {
               $Notify->IsSMTP(); // telling the class to use SMTP             
               $Notify->SMTPAuth   = true;                  
-              $Notify->Host = $modx->config['smtp_host']; //host from modx configuration
-              $Notify->Port = $modx->config['smtp_port']; //port from modx configuration
-              $Notify->Username = $modx->config['smtp_username'];  //user from modx configuration
-              $passsmtp = $modx->config['smtppw']; //encoded password from modx configuration
+              $Notify->Host = $this->modx->config['smtp_host']; //host from modx configuration
+              $Notify->Port = $this->modx->config['smtp_port']; //port from modx configuration
+              $Notify->Username = $this->modx->config['smtp_username'];  //user from modx configuration
+              $passsmtp = $this->modx->config['smtppw']; //encoded password from modx configuration
               $passsmtp = base64_decode(substr($passsmtp, 0, strpos($passsmtp, '%')) . '=');
               $Notify->Password   = $passsmtp; 
             }		
@@ -814,14 +814,14 @@ class WebLoginPE
                 $Pruned = new PHPMailer();
                 
                 // enable smtp via modx configuration
-                if ($modx->config['email_method'] == 'smtp')
+                if ($this->modx->config['email_method'] == 'smtp')
                 {
                   $Pruned->IsSMTP(); // telling the class to use SMTP             
                   $Pruned->SMTPAuth   = true;                  
-                  $Pruned->Host = $modx->config['smtp_host']; //host from modx configuration
-                  $Pruned->Port = $modx->config['smtp_port']; //port from modx configuration
-                  $Pruned->Username = $modx->config['smtp_username'];  //user from modx configuration
-                  $passsmtp = $modx->config['smtppw']; //encoded password from modx configuration
+                  $Pruned->Host = $this->modx->config['smtp_host']; //host from modx configuration
+                  $Pruned->Port = $this->modx->config['smtp_port']; //port from modx configuration
+                  $Pruned->Username = $this->modx->config['smtp_username'];  //user from modx configuration
+                  $passsmtp = $this->modx->config['smtppw']; //encoded password from modx configuration
                   $passsmtp = base64_decode(substr($passsmtp, 0, strpos($passsmtp, '%')) . '=');
                   $Pruned->Password   = $passsmtp; 
                 }	
@@ -1038,15 +1038,14 @@ class WebLoginPE
                 $newPasswordKey = $this->GeneratePassword(10);
                 $this->User = $this->modx->db->getRow($userInfo);
                 $insertNewPassword = "UPDATE " . $web_users . " SET cachepwd='" . $newPassword . "|" . $newPasswordKey . "' WHERE id='" . $this->User['internalKey'] . "'";
-                $setCachePassword = $this->modx->db->query($insertNewPassword);
+                $this->modx->db->query($insertNewPassword);
 
                 // build activation url
                 $activateId = (!empty($activateId) ? $activateId : $this->modx->documentIdentifier);
                 if ($_SERVER['SERVER_PORT'] != '80') {
-                    $url = $this->modx->config['server_protocol'] . '://' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . $this->modx->makeURL($activateId, '', "?service=activate&userid=" . $this->User['id'] . "&activationkey=" . $newPasswordKey);
+                    $url = $this->modx->config['server_protocol'] . '://' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . $this->modx->makeURL($activateId, '', "?service=activate&userid=" . $this->User['id'] . "&activationkey=" . $newPasswordKey . "&activationpassword=" . $newPassword);
                 } else {
-                    $url = $this->modx->config['server_protocol'] . '://' . $_SERVER['SERVER_NAME'] . $this->modx->makeURL($activateId, '', "?service=activate&userid=" . $this->User['id'] . "&activationkey=" . $newPasswordKey);
-                    //$url = $_SERVER['HTTP_REFERER']."&service=activate&userid=".$this->User['id']."&activationkey=".$newPasswordKey;
+                    $url = $this->modx->config['server_protocol'] . '://' . $_SERVER['SERVER_NAME'] . $this->modx->makeURL($activateId, '', "?service=activate&userid=" . $this->User['id'] . "&activationkey=" . $newPasswordKey . "&activationpassword=" . $newPassword);
                 }
 
                 // Replace some placeholders in the Config websignupemail message.
@@ -1058,7 +1057,6 @@ class WebLoginPE
                 }
                 $myEmail = $this->modx->config['emailsender'];
                 $siteName = $this->modx->config['site_name'];
-                $siteURL = $this->modx->config['site_url'];
 
                 $message = str_replace("[+uid+]", $this->User['username'], $messageTpl);
                 $message = str_replace("[+pwd+]", $newPassword, $message);
@@ -1077,14 +1075,14 @@ class WebLoginPE
                 $Register = new PHPMailer();
                 
                 // enable smtp via modx configuration
-                if ($modx->config['email_method'] == 'smtp')
+                if ($this->modx->config['email_method'] == 'smtp')
                 {
                   $Register->IsSMTP(); // telling the class to use SMTP             
                   $Register->SMTPAuth   = true;                  
-                  $Register->Host = $modx->config['smtp_host']; //host from modx configuration
-                  $Register->Port = $modx->config['smtp_port']; //port from modx configuration
-                  $Register->Username = $modx->config['smtp_username'];  //user from modx configuration
-                  $passsmtp = $modx->config['smtppw']; //encoded password from modx configuration
+                  $Register->Host = $this->modx->config['smtp_host']; //host from modx configuration
+                  $Register->Port = $this->modx->config['smtp_port']; //port from modx configuration
+                  $Register->Username = $this->modx->config['smtp_username'];  //user from modx configuration
+                  $passsmtp = $this->modx->config['smtppw']; //encoded password from modx configuration
                   $passsmtp = base64_decode(substr($passsmtp, 0, strpos($passsmtp, '%')) . '=');
                   $Register->Password   = $passsmtp;    
                 }	
@@ -1650,14 +1648,14 @@ class WebLoginPE
         $EmailMessage = new PHPMailer();
         
         // enable smtp via modx configuration
-        if ($modx->config['email_method'] == 'smtp')
+        if ($this->modx->config['email_method'] == 'smtp')
         {
           $EmailMessage->IsSMTP(); // telling the class to use SMTP             
           $EmailMessage->SMTPAuth   = true;                  
-          $EmailMessage->Host = $modx->config['smtp_host']; //host from modx configuration
-          $EmailMessage->Port = $modx->config['smtp_port']; //port from modx configuration
-          $EmailMessage->Username = $modx->config['smtp_username'];  //user from modx configuration
-          $passsmtp = $modx->config['smtppw']; //encoded password from modx configuration
+          $EmailMessage->Host = $this->modx->config['smtp_host']; //host from modx configuration
+          $EmailMessage->Port = $this->modx->config['smtp_port']; //port from modx configuration
+          $EmailMessage->Username = $this->modx->config['smtp_username'];  //user from modx configuration
+          $passsmtp = $this->modx->config['smtppw']; //encoded password from modx configuration
           $passsmtp = base64_decode(substr($passsmtp, 0, strpos($passsmtp, '%')) . '=');
           $EmailMessage->Password   = $passsmtp; 
         }	
@@ -1732,14 +1730,14 @@ class WebLoginPE
             $Reset = new PHPMailer();
             
             // enable smtp via modx configuration
-            if ($modx->config['email_method'] == 'smtp')
+            if ($this->modx->config['email_method'] == 'smtp')
             {
               $Reset->IsSMTP(); // telling the class to use SMTP             
               $Reset->SMTPAuth   = true;                  
-              $Reset->Host = $modx->config['smtp_host']; //host from modx configuration
-              $Reset->Port = $modx->config['smtp_port']; //port from modx configuration
-              $Reset->Username = $modx->config['smtp_username'];  //user from modx configuration
-              $passsmtp = $modx->config['smtppw']; //encoded password from modx configuration
+              $Reset->Host = $this->modx->config['smtp_host']; //host from modx configuration
+              $Reset->Port = $this->modx->config['smtp_port']; //port from modx configuration
+              $Reset->Username = $this->modx->config['smtp_username'];  //user from modx configuration
+              $passsmtp = $this->modx->config['smtppw']; //encoded password from modx configuration
               $passsmtp = base64_decode(substr($passsmtp, 0, strpos($passsmtp, '%')) . '=');
               $Reset->Password   = $passsmtp; 
             }	
@@ -1896,7 +1894,8 @@ class WebLoginPE
         }
         $this->setPlaceholder('user.defaultphoto', 'assets/snippets/webloginpe/userimages/default_user.jpg');
         $this->setPlaceholder('request.userid', $_REQUEST['userid']);
-        $this->setPlaceholder('request.activationkey', $_REQUEST['activationkey']);
+        $this->setPlaceholder('request.activationkey', htmlspecialchars(strip_tags($_REQUEST['activationkey']), ENT_QUOTES, $this->modx->config['modx_charset']));
+        $this->setPlaceholder('request.activationpassword', htmlspecialchars(strip_tags($_REQUEST['activationpassword']), ENT_QUOTES, $this->modx->config['modx_charset']));
         $this->setPlaceholder('form.captcha', 'manager/includes/veriword.php');
 
         // Handle Special input placeholders.
